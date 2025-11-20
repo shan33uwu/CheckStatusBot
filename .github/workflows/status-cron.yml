@@ -1,0 +1,34 @@
+name: Check Status
+
+on:
+  schedule:
+    # 每 30 分鐘執行一次 (GitHub Action 免費版最短間隔約為 5-10 分鐘)
+    - cron: "*/5 * * * *"
+  workflow_dispatch: # 允許手動按按鈕觸發
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run check script
+        run: node check.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "shan33uwu"
+          git config --global user.email "ookokioo8456@gmail.com"
+          git add history.json
+          # 如果有變更才提交
+          git commit -m "Update status history [skip ci]" || exit 0
+          git push
