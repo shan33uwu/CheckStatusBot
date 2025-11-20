@@ -1,0 +1,9 @@
+{
+  "lastUpdate": "",
+  "services": [
+    { "id": "api", "history": [] },
+    { "id": "core1", "history": [] },
+    { "id": "core2", "history": [] },
+    { "id": "web", "history": [] }
+  ]
+}
