@@ -1,9 +1,29 @@
 {
-  "lastUpdate": "",
+  "lastUpdate": "2025-11-20T10:36:06.389Z",
   "services": [
-    { "id": "api", "history": [] },
-    { "id": "core1", "history": [] },
-    { "id": "core2", "history": [] },
-    { "id": "web", "history": [] }
+    {
+      "id": "api",
+      "history": [
+        1
+      ]
+    },
+    {
+      "id": "core1",
+      "history": [
+        1
+      ]
+    },
+    {
+      "id": "core2",
+      "history": [
+        1
+      ]
+    },
+    {
+      "id": "web",
+      "history": [
+        1
+      ]
+    }
   ]
 }
